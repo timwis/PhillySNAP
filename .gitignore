@@ -1,0 +1,6 @@
+.c9revisions/
+parse/
+parse.sh
+server/node_modules/
+!server/node_modules/timsgeocoder/
+!server/node_modules/arcnearby/
