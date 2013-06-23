@@ -14,7 +14,7 @@ var config = require("./config")
         if(body) { // If message body (address) provided
             // Geocode address
             geocoder.geocode(body, config.geocoder, config.city).then(function(coords) {
-                if(typeof coords !== "object" || ! coords.length) return promise.reject("Failed to locate address provided");
+                if(typeof coords !== "object" || ! coords.length) return promise.reject("Failed to locate address " + body);
                 
                 var actions = [], replies = [];
                 
