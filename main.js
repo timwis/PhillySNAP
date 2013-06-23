@@ -82,6 +82,14 @@ var express = require("express")
         });
     });
     
+    app.all("/api/logs", function(req, res) {
+        var client = new twilio.RestClient();
+        client.sms.messages.list({dateSent: "2013-06-21"}, function(err, data) {
+            //delete data.sms_messages;
+            res.json(data);
+        });
+    });
+    
     app.use(express.static(__dirname + "/public"));
     
     app.listen(process.env.PORT || 4730);
