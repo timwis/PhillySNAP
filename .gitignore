@@ -1,5 +1,2 @@
 .c9revisions/
 parse/
-node_modules/
-!node_modules/timsgeocoder/
-!node_modules/arcnearby/
