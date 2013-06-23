@@ -1,6 +1,5 @@
 .c9revisions/
 parse/
-parse.sh
-server/node_modules/
-!server/node_modules/timsgeocoder/
-!server/node_modules/arcnearby/
+node_modules/
+!node_modules/timsgeocoder/
+!node_modules/arcnearby/

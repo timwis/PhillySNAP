@@ -1,0 +1,22 @@
+{
+  "name": "phillysnap",
+  "version": "0.0.1",
+  "description": "Find nearby farmers markets and SNAP-accepting retailers via text message",
+  "main": "main.js",
+  "dependencies": {
+    "twilio": "~1.1.3",
+    "request": "~2.21.0",
+    "node-promise": "~0.5.6",
+    "express": "~3.2.6",
+    "arcnearby": "~0.0.4",
+    "timsgeocoder": "~0.0.1",
+    "underscore": "~1.4.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "Tim Wisniewski",
+  "license": "MIT"
+}
