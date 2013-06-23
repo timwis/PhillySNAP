@@ -1,6 +1,15 @@
 module.exports = {
-    geocoder: "google"
-    ,city: "Philadelphia, PA"
+    admin: {
+        user: "admin"
+        ,pass: "test"
+    }
+    ,errors: {
+        emptyMessage: "Please send a street address for results, ie. 1234 Market St"
+        ,geocodeNoResults: "Unrecognized address. Please use only the street address, ie. 1234 Market St"
+        ,geocodeError: "There was an error while locating that address"
+    }
+    ,geocoder: "google"
+    ,city: "Philadelphia"
     ,actions: [
         {
             service: "farmersMarkets"
