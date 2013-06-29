@@ -9,4 +9,4 @@ To install,
 1. Clone this repo
 2. Modify `config.js` to suit your needs
 3. Deploy to heroku
-4. Point a twilio phone number to `http://<yourapp>.herokuapp.com/api/lookup?format=twiml`
+4. Point a twilio phone number to `http://<yourapp>.herokuapp.com/api/<module>?format=twiml`
