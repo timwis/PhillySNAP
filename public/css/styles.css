@@ -1,0 +1,25 @@
+.chat {
+}
+
+.chat-title {
+}
+
+.chat-messages {
+    height: 360px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-right: 3px;
+}
+
+.chat-message {
+    width: 60%;
+}
+
+.chat-message .alert {
+    padding: 5px;
+}
+
+.outbound {
+    margin-left: auto;
+    text-align: right;
+}

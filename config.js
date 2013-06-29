@@ -27,6 +27,8 @@ module.exports = {
                                 ,results[0].attributes.DAY_TIME + " ("
                                 ,results[0].attributes.distance.toFixed(2) + "mi)"
                             ].join(""));
+                        } else {
+                            replies.push("No farmers markets found in a 2 mile radius");
                         }
                         return replies;
                     }
@@ -44,6 +46,8 @@ module.exports = {
                                 ,results[0].attributes.STORE_ADDR + " ("
                                 ,results[0].attributes.distance.toFixed(2) + "mi)"
                             ].join(""));
+                        } else {
+                            replies.push("No healthy corner stores found in a 1 mile radius");
                         }
                         return replies;
                     }
@@ -55,7 +59,7 @@ module.exports = {
             ,city: "Philadelphia"
             ,actions: [
                 {
-                    service: "http://gis.phila.gov/ArcGIS/rest/services/Streets/Bike_Racks/MapServer/0/query"
+                    service: "http://gis.phila.gov/ArcGIS/rest/services/Streets/Bike_Racks/MapServer/1/query"
                     ,radius: 1
                     ,filter: {}
                     ,parse: function(results) {
@@ -67,6 +71,33 @@ module.exports = {
                                 ,results[0].attributes.ADDRESS + ") ("
                                 ,results[0].attributes.distance.toFixed(2) + "mi)"
                             ].join(""));
+                        } else {
+                            replies.push("No bike racks found in a 1 mile radius");
+                        }
+                        return replies;
+                    }
+                }
+            ]
+        }
+        ,usdaretailers: {
+            geocoder: "google"
+            ,city: "" // This is a nation-wide data set
+            ,actions: [
+                {
+                    service: "http://snap-load-balancer-244858692.us-east-1.elb.amazonaws.com/ArcGIS/rest/services/retailer/MapServer/0/query"
+                    ,radius: 1
+                    ,filter: {}
+                    ,parse: function(results) {
+                        var replies = [];
+                        if(results.length) {
+                            replies.push([
+                                "SNAP Retailer: "
+                                ,results[0].attributes.STORE_NAME + ", "
+                                ,results[0].attributes.ADDRESS + " ("
+                                ,results[0].attributes.distance.toFixed(2) + "mi)"
+                            ].join(""));
+                        } else {
+                            replies.push("No SNAP-accepting retailers found in a 1 mile radius");
                         }
                         return replies;
                     }

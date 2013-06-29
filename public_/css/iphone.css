@@ -2,7 +2,7 @@
 
 body {
     color: #595441;
-    margin:0px;
+	margin:0px;
 	width: auto;
 	font: 16px 'Quicksand';
 }
@@ -171,7 +171,6 @@ body {
 	margin-top: 13px;
 	top: 4px;
 	position: relative;
-    margin: 0 auto;
 }
 .iPhone .edit{
 	-moz-border-radius:12px;
