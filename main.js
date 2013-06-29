@@ -26,7 +26,7 @@ var config = require("./config")
                 });
                 
                 nodePromise.all(actions).then(function(promises) { promise.resolve(replies); });
-            }, function(code) {
+            }, function(response, body) {
                 promise.reject(config.errors.geocodeError);
             });
         } else {

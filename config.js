@@ -12,7 +12,7 @@ module.exports = {
     ,city: "Philadelphia"
     ,actions: [
         {
-            service: "farmersMarkets"
+            service: "http://gis.phila.gov/arcgis/rest/services/PhilaGov/Farmers_Markets/MapServer/0/query"
             ,radius: 2
             ,filter: {where: "ACCEPT_SNA = 'Yes'"}
             ,parse: function(results) {
@@ -30,7 +30,7 @@ module.exports = {
             }
         }
         ,{
-            service: "cornerStores"
+            service: "http://gis.phila.gov/arcgis/rest/services/PhilaGov/Healthy_Corner_Stores/MapServer/0/query"
             ,radius: 1
             ,filter: {}
             ,parse: function(results) {
