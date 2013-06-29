@@ -64,7 +64,7 @@ function receiveText(smsText)
 	var conversation = $('#conversation');
 	var sender = $('#phone').val();
 	
-	$.get('api/lookup/' + encodeURIComponent(smsText), 
+	$.get('api/phillysnap/' + encodeURIComponent(smsText), 
 	function(response){
         if(response.data !== undefined && response.data.length) {
             var i = 0;
