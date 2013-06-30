@@ -24,3 +24,7 @@
     margin-left: auto;
     text-align: right;
 }
+
+@media (max-width: 480px) {
+    .hero-unit h1 { font-size: 35px; }
+}
