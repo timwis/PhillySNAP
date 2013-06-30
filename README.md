@@ -1,8 +1,8 @@
 PhillySNAP
 ==========
-Find nearby farmers markets and SNAP-accepting retailers via text message.
-
-While the default configuration is farmers markets and retailers in Philadelphia, you can modify `config.js` to pull data from any ArcGIS service, such as crime, permits, etc.
+This platform lets you connect people to ArcGIS Services via text message.
+By modifying a basic [config file](https://github.com/timwis/PhillySNAP/blob/master/config.js), you can setup a twilio endpoint for any ArcGIS Service, creating a custom reply.
+Included are some examples from [gis.phila.gov](http://gis.phila.gov/arcgis/rest/services) and [snapretailerlocator.com](http://www.snapretailerlocator.com).
 
 To install,
 
