@@ -104,5 +104,31 @@ module.exports = {
                 }
             ]
         }
+        ,keyspots: {
+            geocoder: "google"
+            ,city: "Philadelphia" // This is a nation-wide data set
+            ,actions: [
+                {
+                    service: "http://gis.phila.gov/ArcGIS/rest/services/PhilaGov/Keyspot_Locations/MapServer/0/query"
+                    ,radius: 3
+                    ,filter: {}
+                    ,parse: function(results) {
+                        var replies = [];
+                        if(results.length) {
+                            replies.push([
+                                "KEYSPOT: "
+                                ,results[0].attributes.NAME + ", "
+                                ,results[0].attributes.MATCH_ADDR
+                                ,(results[0].attributes.NOTES.trim() ? ", " + results[0].attributes.NOTES.trim() : "") + " ("
+                                ,results[0].attributes.distance.toFixed(2) + "mi)"
+                            ].join(""));
+                        } else {
+                            replies.push("No KEYSPOT found in a 3 mile radius");
+                        }
+                        return replies;
+                    }
+                }
+            ]
+        }
     }
 };
