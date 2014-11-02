@@ -7,31 +7,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap-responsive.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
     <div class="container">
-    
-        <div class="hero-unit">
-            <h1>PhillySNAP</h1>
-            <p>
-                This platform lets you connect people to ArcGIS Services via text message.
-                By modifying a basic <a href="https://github.com/timwis/PhillySNAP/blob/master/config.js">config file</a>, you can setup a twilio endpoint for any ArcGIS Service, creating a custom reply.
-                Below are some examples from <a href="http://gis.phila.gov/arcgis/rest/services">gis.phila.gov</a> and <a href="http://www.snapretailerlocator.com">snapretailerlocator.com</a>.
-            </p>
-        </div>
-    
-        <div class="row">
-            <div class="span6">
         
+        <img src="img/logo.png" alt="PhillySNAP">
+        
+        <div class="row">
+            <div class="span8">
+                <div class="well">
+                    <p>The United States Supplemental Nutrition Assistance Program (SNAP), historically and commonly known as the Food Stamp Program, is a federal-assistance program that provides assistance to low- and no-income people and families living in the U.S. Though the program is administered by the U.S. Department of Agriculture, benefits are distributed by the individual U.S. states. </p>
+                    <p>Text your street address to <b>(215) 987-6601</b> and receive the nearest Farmers Market address, dates of operation and hours, the closet two SNAP-participating retailers, and information on how to maximize your SNAP dollars through local fresh food initiatives. </p>
+                    <p>Did you know most of Philadelphia's Farmer's Market accept SNAP benefits for payment? Many of Philadelphia's Farmers' Markets even give out additional bonus coupons for SNAP spending in their markets. </p>
+                    <p>Giving Philadelphians the information to spend SNAP benefits at local fresh markets brings healthy food to our tables and supports local businesses and farms. </p>
+                    </p>
+                </div>
+                
+                <ul class="thumbnails">
+                    <li class="span2">
+                        <a href="#" class="thumbnail">
+                          <img src="img/market_.png" alt="Market">
+                        </a>
+                    </li>
+                    <li class="span4">
+                        <iframe src="http://player.vimeo.com/video/26097355?title=0&amp;byline=0&amp;portrait=0&amp;color=ef3c4e" width="400" height="225" frameborder="0"></iframe>
+                    </li>
+                    <li class="span2">
+                        <a href="#" class="thumbnail">
+                          <img src="img/iphone_.png" alt="Market">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="span4">
                 <div class="chat well" data-module="phillysnap">
                     <div class="chat-title">
                         <div class="navbar">
                             <div class="navbar-inner">
-                            <a class="brand" href="#">PhillySNAP</a>
+                            <a class="brand" href="#">(215) 987-6601</a>
                             </div>
                         </div>
                     </div>
@@ -53,9 +70,21 @@
                         </form>
                     </div>
                 </div>
-                
             </div>
-            <div class="span6">
+        </div>
+    
+        <div class="hero-unit">
+            <h1>The Texting Platform</h1>
+            <p>
+                This platform lets you connect people to ArcGIS Services via text message.
+                By modifying a basic <a href="https://github.com/timwis/PhillySNAP/blob/master/config.js">config file</a>, you can setup a twilio endpoint for any ArcGIS Service, creating a custom reply.
+                Below are some examples from <a href="http://gis.phila.gov/arcgis/rest/services">gis.phila.gov</a> and <a href="http://www.snapretailerlocator.com">snapretailerlocator.com</a>.
+            </p>
+            <iframe src="http://ghbtns.com/github-btn.html?user=timwis&repo=PhillySNAP&type=fork" allowtransparency="true" frameborder="0" scrolling="0" width="53" height="20"></iframe>
+        </div>
+    
+        <div class="row">
+            <div class="span4">
         
                 <div class="chat well" data-module="bikeracks">
                     <div class="chat-title">
@@ -82,9 +111,7 @@
                 </div>
                 
             </div>
-        </div>
-        <div class="row">
-            <div class="span6">
+            <div class="span4">
         
                 <div class="chat well" data-module="usdaretailers">
                     <div class="chat-title">
@@ -111,7 +138,7 @@
                 </div>
                 
             </div>
-            <div class="span6">
+            <div class="span4">
         
                 <div class="chat well" data-module="keyspots">
                     <div class="chat-title">
@@ -142,6 +169,7 @@
     </div>
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
