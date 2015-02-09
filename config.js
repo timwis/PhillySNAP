@@ -130,5 +130,32 @@ module.exports = {
                 }
             ]
         }
+        ,us2020_busstops: {
+            geocoder: "google"
+            ,city: "Philadelphia" // This is a nation-wide data set
+            ,actions: [
+                {
+                    service: "http://services.arcgis.com/fLeGjb7u4uXqeF9q/arcgis/rest/services/US20202015_CollectorExercise/FeatureServer/3/query"
+                    ,radius: 3
+                    ,filter: {}
+                    ,parse: function(results) {
+                        var replies = [];
+                        if(results.length) {
+                            replies.push([
+                                "Bus Stop: "
+                                ,results[0].attributes.ONSTREET + " "
+                                ,results[0].attributes.ONSUFFIX + " at "
+                                ,results[0].attributes.ATSTREET + " "
+                                ,results[0].attributes.ATSUFFIX + " ("
+                                ,results[0].attributes.distance.toFixed(2) + "mi)"
+                            ].join(""));
+                        } else {
+                            replies.push("No Bus Stop found in a 3 mile radius");
+                        }
+                        return replies;
+                    }
+                }
+            ]
+        }
     }
 };
