@@ -157,5 +157,28 @@ module.exports = {
                 }
             ]
         }
+        ,us2020_trashcans: {
+            geocoder: "google"
+            ,city: "Philadelphia" // This is a nation-wide data set
+            ,actions: [
+                {
+                    service: "http://services.arcgis.com/fLeGjb7u4uXqeF9q/ArcGIS/rest/services/US20202015_CollectorExercise/FeatureServer/5/query"                    ,radius: 3
+                    ,filter: {}
+                    ,parse: function(results) {
+                        var replies = [];
+                        if(results.length) {
+                            replies.push([
+                                "Trash Receptacle: "
+                                ,results[0].attributes.ADDRESS + " ("
+                                ,results[0].attributes.distance.toFixed(2) + "mi)"
+                            ].join(""));
+                        } else {
+                            replies.push("No trash receptcale found in a 3 mile radius");
+                        }
+                        return replies;
+                    }
+                }
+            ]
+        }
     }
 };
