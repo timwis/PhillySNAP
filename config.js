@@ -169,7 +169,7 @@ module.exports = {
                         if(results.length) {
                             replies.push([
                                 "Trash Receptacle: "
-                                ,results[0].attributes.ADDRESS + " ("
+                                ,results[0].attributes.Address + " ("
                                 ,results[0].attributes.distance.toFixed(2) + "mi)"
                             ].join(""));
                         } else {
