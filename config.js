@@ -180,5 +180,30 @@ module.exports = {
                 }
             ]
         }
+        ,parks: {
+            geocoder: "google"
+            ,city: "Philadelphia" // This is a nation-wide data set
+            ,actions: [
+                {
+                    service: "http://gis.phila.gov/arcgis/rest/services/PhilaGov/Parks/MapServer/0/query"
+                    ,radius: 3
+                    ,filter: {}
+                    ,parse: function(results) {
+                        var replies = [];
+                        if(results.length) {
+                            replies.push([
+                                "Park: "
+                                ,results[0].attributes.NAME + " "
+                                ,results[0].attributes.ADDRESS + " ("
+                                ,results[0].attributes.distance.toFixed(2) + "mi)"
+                            ].join(""));
+                        } else {
+                            replies.push("No park found in a 3 mile radius");
+                        }
+                        return replies;
+                    }
+                }
+            ]
+        }
     }
 };
